@@ -29,7 +29,7 @@ def create_dict(name, age, title):
 
     dict = {'first_name': str(name), 'age': int(age), 'title': str(title)}
     json_object = j.dumps(dict)
-    return json_object
+    return dict
     
     raise NotImplementedError()
 
@@ -50,7 +50,7 @@ def write_json_to_file(json_obj, output_file):
     newfile = open(output_file,"w")
     newfile.write(json_obj)
     newfile.close()
-    return
+    return newfile
 
     raise NotImplementedError()
 

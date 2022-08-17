@@ -27,8 +27,9 @@ def create_dict(name, age, title):
     """
     ### WRITE SOLUTION HERE
 
-    dict = {'first_name': employee_name, 'age': int(age), 'title': title}
-    return dict
+    dict = {'first_name': str(name), 'age': int(age), 'title': str(title)}
+    json_object = j.dumps(dict)
+    return json_object
     
     raise NotImplementedError()
 
@@ -45,11 +46,11 @@ def write_json_to_file(json_obj, output_file):
     """
     ### WRITE SOLUTION HERE
 
-    json_object = j.dumps(create_dict(employee_name, age, title))
-    newfile = open("employee.json","w")
-    newfile.write(json_object)
+   
+    newfile = open(output_file,"w")
+    newfile.write(json_obj)
     newfile.close()
-    return json_object
+    return
 
     raise NotImplementedError()
 
